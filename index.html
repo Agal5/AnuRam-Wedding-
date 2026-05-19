@@ -1,763 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ram Prasath & Anuvarsha Wedding</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    body{
-      font-family:'Poppins',sans-serif;
-      background:#fff5f7;
-      color:#4b1c2b;
-      overflow-x:hidden;
-    }
-
-    .font-script{
-      font-family:'Great Vibes',cursive;
-    }
-
-    .font-display{
-      font-family:'Cormorant Garamond',serif;
-    }
-
-    .hero-bg{
-      background:
-      linear-gradient(rgba(255,245,247,0.92),rgba(255,245,247,0.92)),
-      url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200');
-      background-size:cover;
-      background-position:center;
-    }
-
-    .glass-card{
-      background:rgba(255,255,255,0.55);
-      backdrop-filter:blur(12px);
-      border:1px solid rgba(255,255,255,0.4);
-    }
-
-    .pink-gradient{
-      background:linear-gradient(135deg,#f9c5d1,#f8a5c2);
-    }
-
-    .soft-shadow{
-      box-shadow:0 10px 40px rgba(236,72,153,0.12);
-    }
-
-    .count-card{
-      background:rgba(255,255,255,0.8);
-      backdrop-filter:blur(10px);
-    }
-
-    .shine-text{
-      background:linear-gradient(90deg,#e11d48,#fb7185,#e11d48);
-      background-size:200%;
-      -webkit-background-clip:text;
-      color:transparent;
-      animation:shine 4s linear infinite;
-    }
-
-    @keyframes shine{
-      to{
-        background-position:200%;
-      }
-    }
-
-    /* floating flowers */
-
-    .flower{
-      position:absolute;
-      top:-80px;
-      font-size:28px;
-      opacity:0.5;
-      animation:fall linear infinite;
-    }
-
-    .flower:nth-child(1){
-      left:8%;
-      animation-duration:8s;
-    }
-
-    .flower:nth-child(2){
-      left:25%;
-      animation-duration:12s;
-    }
-
-    .flower:nth-child(3){
-      left:50%;
-      animation-duration:9s;
-    }
-
-    .flower:nth-child(4){
-      left:75%;
-      animation-duration:11s;
-    }
-
-    .flower:nth-child(5){
-      left:90%;
-      animation-duration:7s;
-    }
-
-    @keyframes fall{
-      0%{
-        transform:translateY(-100px) rotate(0deg);
-        opacity:0;
-      }
-
-      20%{
-        opacity:0.5;
-      }
-
-      100%{
-        transform:translateY(120vh) rotate(360deg);
-        opacity:0;
-      }
-    }
-
-    .hover-card{
-      transition:0.4s ease;
-    }
-
-    .hover-card:hover{
-      transform:translateY(-10px);
-    }
-
-    .section-space{
-      padding:90px 24px;
-    }
-
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:10px 22px;
-      border-radius:999px;
-      font-size:14px;
-      letter-spacing:2px;
-      text-transform:uppercase;
-    }
-    /* =========================
-   MOBILE RESPONSIVE
-========================= */
-
-@media (max-width:768px){
-
-  body{
-    overflow-x:hidden;
-  }
-
-  .section-space{
-    padding:70px 18px;
-  }
-
-  /* HERO */
-
-  .hero-bg{
-    padding-top:90px;
-    padding-bottom:80px;
-  }
-
-  .hero-bg .font-script:first-child{
-    font-size:42px !important;
-    line-height:1.2;
-  }
-
-  .hero-bg .font-script:nth-child(7){
-    font-size:48px !important;
-  }
-
-  .shine-text{
-    font-size:58px !important;
-    line-height:1;
-  }
-
-  .hero-bg .text-7xl{
-    font-size:52px !important;
-  }
-
-  .hero-bg p.tracking-\[0\.4em\]{
-    font-size:11px;
-    letter-spacing:0.25em;
-    margin-top:24px;
-  }
-
-  /* COUNTDOWN */
-
-  #countdown{
-    grid-template-columns:repeat(2,1fr);
-    gap:16px;
-    margin-top:45px;
-  }
-
-  .count-card{
-    padding:22px 10px;
-  }
-
-  .count-card .text-5xl{
-    font-size:42px !important;
-  }
-
-  /* HEADINGS */
-
-  h2.font-display{
-    font-size:48px !important;
-    line-height:1.1;
-  }
-
-  h3.font-display{
-    font-size:42px !important;
-    line-height:1.1;
-  }
-
-  /* COUPLE SECTION */
-
-  .glass-card{
-    padding:28px 24px !important;
-  }
-
-  .glass-card p{
-    line-height:1.8;
-  }
-
-  /* EVENT SECTION */
-
-  .badge{
-    font-size:12px;
-    padding:8px 18px;
-    letter-spacing:1px;
-  }
-
-  .hover-card{
-    border-radius:30px !important;
-  }
-
-  .hover-card h3{
-    font-size:52px !important;
-  }
-
-  .hover-card .space-y-6{
-    margin-top:35px;
-  }
-
-  .hover-card .space-y-6 div{
-    gap:14px;
-    align-items:flex-start;
-  }
-
-  .hover-card .space-y-6 p{
-    font-size:18px;
-    line-height:1.5;
-  }
-
-  /* GALLERY */
-
-  .md\:translate-y-10{
-    transform:none !important;
-  }
-
-  /* VENUE */
-
-  iframe{
-    height:300px !important;
-  }
-
-  /* CONTACT */
-
-  .grid.sm\:grid-cols-2{
-    grid-template-columns:1fr;
-  }
-
-  /* FOOTER */
-
-  footer .font-script{
-    font-size:42px !important;
-  }
-
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Ram Prasath & Anuvarsha Wedding</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=IM+Fell+English:ital@0;1&family=Cinzel:wght@400;600&family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --rose:#b5294e;--rose-light:#e8547a;--blush:#f7dce3;--petal:#fdf0f3;
+  --cream:#fffaf8;--dusty:#d4899f;--deep:#6b0f2b;--mid:#c94070;
 }
+html,body{background:var(--cream);font-family:'Cormorant Garamond',serif;color:var(--deep);overflow-x:hidden}
 
+.page{max-width:700px;margin:0 auto;padding:0 0 60px}
 
-/* EXTRA SMALL DEVICES */
-
-@media (max-width:480px){
-
-  .shine-text{
-    font-size:48px !important;
-  }
-
-  h2.font-display{
-    font-size:40px !important;
-  }
-
-  h3.font-display{
-    font-size:36px !important;
-  }
-
-  .hero-bg .font-script:first-child{
-    font-size:34px !important;
-  }
-
-  .hero-bg .font-script:nth-child(7){
-    font-size:40px !important;
-  }
-
-  #countdown{
-    gap:12px;
-  }
-
-  .count-card .text-5xl{
-    font-size:34px !important;
-  }
-
-  .count-card{
-    border-radius:24px !important;
-  }
-
-  .hover-card h3{
-    font-size:42px !important;
-  }
-
+/* HERO */
+.hero{
+  background:linear-gradient(170deg,#fff9fb 0%,#fdf0f3 40%,#f7dce3 100%);
+  padding:52px 40px 44px;text-align:center;position:relative;
+  border-bottom:1px solid #e8c2ce;
+  border-radius:0 0 32px 32px;
 }
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:repeating-linear-gradient(90deg,var(--rose) 0,var(--rose) 6px,transparent 6px,transparent 14px)}
+.hero::after{content:'';position:absolute;bottom:-1px;left:5%;right:5%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--dusty),transparent)}
 
-  </style>
+.hero-pre{font-family:'Dancing Script',cursive;font-size:22px;color:var(--dusty);letter-spacing:.04em;margin-bottom:8px}
+.hero-god{font-family:'IM Fell English',serif;font-style:italic;font-size:16px;color:var(--dusty);letter-spacing:.15em;text-transform:uppercase;margin-bottom:32px}
+.hero-divider{display:flex;align-items:center;justify-content:center;gap:12px;margin:18px 0}
+.hero-divider span{height:1px;width:60px;background:linear-gradient(90deg,transparent,var(--dusty))}
+.hero-divider i{color:var(--dusty);font-size:13px;letter-spacing:5px;font-style:normal}
+.groom-name{font-family:'Cinzel',serif;font-size:clamp(28px,5.5vw,52px);font-weight:600;color:var(--deep);letter-spacing:.06em;line-height:1}
+.bride-name{font-family:'Cinzel',serif;font-size:clamp(28px,5.5vw,52px);font-weight:600;color:var(--rose);letter-spacing:.06em;line-height:1}
+.ampersand{font-family:'Dancing Script',cursive;font-size:clamp(44px,8vw,80px);color:var(--dusty);line-height:1;display:block;margin:2px 0}
+.date-strip{margin-top:28px;display:inline-block;border:1px solid var(--dusty);padding:8px 32px;
+  font-family:'Cinzel',serif;font-size:13px;letter-spacing:.35em;color:var(--rose);text-transform:uppercase;border-radius:50px}
+
+/* COUNTDOWN */
+.countdown{background:#fff;border-top:1px solid #ecd5db;border-bottom:1px solid #ecd5db;
+  display:grid;grid-template-columns:repeat(4,1fr)}
+.cbox{padding:18px 8px;text-align:center;border-right:1px solid #ecd5db}
+.cbox:last-child{border-right:none}
+.cnum{font-family:'Cinzel',serif;font-size:clamp(24px,4vw,40px);font-weight:600;color:var(--rose);line-height:1}
+.clbl{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--dusty);margin-top:4px;font-family:'Cormorant Garamond',serif}
+
+/* SECTION HEADER */
+.sec-head{padding:36px 40px 0;text-align:center}
+.sec-kicker{font-family:'Dancing Script',cursive;font-size:22px;color:var(--dusty);display:block}
+.sec-title{font-family:'IM Fell English',serif;font-size:clamp(22px,4vw,34px);color:var(--deep);margin-top:2px;font-style:italic;line-height:1.2}
+.orn{display:flex;align-items:center;justify-content:center;gap:10px;margin:14px 0 0}
+.orn span{height:1px;width:50px;background:linear-gradient(90deg,transparent,var(--dusty))}
+.orn i{color:var(--dusty);font-size:11px;letter-spacing:5px;font-style:normal}
+
+/* COUPLE CARDS */
+.couple-wrap{padding:20px 24px 0;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:560px){.couple-wrap{grid-template-columns:1fr}}
+.pc{background:#fff;border:1px solid #e8c8d2;padding:28px 24px;position:relative;border-radius:20px;overflow:hidden}
+.pc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--rose);border-radius:20px 20px 0 0}
+.pc-role{font-family:'Dancing Script',cursive;font-size:20px;color:var(--dusty);margin-bottom:4px}
+.pc-name{font-family:'Cinzel',serif;font-size:clamp(16px,2.5vw,22px);font-weight:600;color:var(--deep);line-height:1.2}
+.pc-qual{font-size:12px;letter-spacing:.2em;color:var(--dusty);text-transform:uppercase;margin:6px 0 12px}
+.pc-line{height:1px;background:linear-gradient(90deg,var(--blush),#e8c8d2,var(--blush));margin-bottom:12px}
+.pc-detail{font-size:15px;font-style:italic;color:#8a3650;line-height:1.7}
+
+/* EVENTS */
+.events-wrap{padding:20px 24px 0;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:560px){.events-wrap{grid-template-columns:1fr}}
+.ev{border:1px solid #e8c8d2;padding:28px 24px;position:relative;background:#fff;overflow:hidden;border-radius:20px}
+.ev::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;border-radius:20px 20px 0 0}
+.ev.reception::before{background:var(--dusty)}
+.ev.wedding::before{background:var(--rose)}
+.ev.wedding{background:linear-gradient(160deg,#fdf0f3 0%,#fff 100%)}
+.ev-type{font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--dusty);margin-bottom:10px;display:block}
+.ev-title{font-family:'IM Fell English',serif;font-size:clamp(22px,3.5vw,30px);color:var(--deep);font-style:italic;line-height:1.15;margin-bottom:16px}
+.ev-title em{color:var(--rose);font-style:normal}
+.ev-row{display:flex;gap:12px;font-size:16px;font-style:italic;color:#7a2d46;padding:6px 0;border-bottom:1px solid #f2dce4;align-items:center}
+.ev-row:last-child{border-bottom:none}
+.ev-ic{color:var(--dusty);font-size:12px;flex-shrink:0;width:16px;text-align:center}
+.ev-ghost{position:absolute;bottom:-8px;right:12px;font-family:'Cinzel',serif;font-size:90px;color:rgba(181,41,78,.07);font-weight:600;line-height:1;pointer-events:none}
+
+/* GALLERY */
+.gallery-wrap{padding:20px 24px 0}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:560px){.gallery-grid{grid-template-columns:1fr 1fr}}
+.gi{overflow:hidden;border:1px solid #e8c8d2;border-radius:16px}
+.gi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;filter:saturate(.9) brightness(1.02)}
+.gi:hover img{transform:scale(1.04)}
+.gi:nth-child(1),.gi:nth-child(4){aspect-ratio:2/3}
+.gi:nth-child(2),.gi:nth-child(3){aspect-ratio:2/3;margin-top:24px}
+
+/* VENUE */
+.venue-wrap{padding:20px 24px 0}
+.venue-loc{text-align:center;font-style:italic;font-size:17px;color:var(--dusty);margin-bottom:14px}
+.map-btn{display:block;width:fit-content;margin:0 auto 18px;border:1px solid var(--dusty);
+  padding:8px 28px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--rose);text-decoration:none;background:#fff;transition:background .2s;border-radius:50px}
+.map-btn:hover{background:var(--blush)}
+.map-outer{border:1px solid #e8c8d2;border-radius:20px;overflow:hidden;position:relative}
+.map-outer::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--rose);z-index:1}
+.map-outer iframe{display:block;width:100%;height:340px;border:none}
+
+/* CONTACT */
+.contact-wrap{padding:20px 24px 0;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:560px){.contact-wrap{grid-template-columns:1fr}}
+.cc{background:#fff;border:1px solid #e8c8d2;padding:26px 22px;text-align:center;
+  text-decoration:none;display:block;position:relative;transition:transform .3s;border-radius:20px;overflow:hidden}
+.cc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--rose);border-radius:20px 20px 0 0}
+.cc:hover{transform:translateY(-3px)}
+.cc-role{font-family:'Dancing Script',cursive;font-size:20px;color:var(--dusty)}
+.cc-name{font-family:'Cinzel',serif;font-size:clamp(14px,2vw,20px);font-weight:600;color:var(--deep);margin:4px 0 12px;line-height:1.2}
+.cc-line{height:1px;background:linear-gradient(90deg,var(--blush),#e8c8d2,var(--blush));margin-bottom:12px}
+.cc-phone{font-size:15px;font-style:italic;color:var(--rose)}
+
+/* CLOSING */
+.closing{padding:36px 40px 0;text-align:center}
+.quote{font-family:'IM Fell English',serif;font-size:18px;font-style:italic;color:var(--dusty);line-height:1.7;max-width:440px;margin:0 auto}
+
+/* FOOTER */
+footer{margin-top:36px;padding:32px 40px;background:linear-gradient(170deg,#fdf0f3,var(--blush));
+  text-align:center;border-top:1px solid #e8c2ce;border-radius:32px 32px 0 0}
+.foot-names{font-family:'Dancing Script',cursive;font-size:clamp(32px,6vw,56px);color:var(--rose);line-height:1.1}
+.foot-date{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--dusty);margin-top:8px}
+.foot-bar{width:60px;height:2px;background:linear-gradient(90deg,var(--dusty),var(--rose));margin:14px auto 0}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+.reveal.vis{opacity:1;transform:none}
+</style>
 </head>
-
 <body>
+<div class="page">
 
 <!-- HERO -->
-
-<section class="hero-bg relative overflow-hidden text-center px-6 pt-24 pb-20">
-
-  <!-- flowers -->
-
-  <div class="flower">🌸</div>
-  <div class="flower">🌺</div>
-  <div class="flower">🌷</div>
-  <div class="flower">💮</div>
-  <div class="flower">🌸</div>
-
-  <p class="font-script text-5xl text-pink-300 relative z-10">
-    With blessings of Lord
-  </p>
-
-  <p class="font-script text-6xl md:text-7xl text-pink-300 relative z-10">
-    Venkateshwara
-  </p>
-
-  <div class="mt-8 flex items-center justify-center gap-5 text-rose-400 relative z-10">
-    <span class="h-px w-14 bg-pink-300"></span>
-    <span>❤</span>
-    <span class="tracking-[0.4em] uppercase text-sm">
-      Wedding Invitation
-    </span>
-    <span>❤</span>
-    <span class="h-px w-14 bg-pink-300"></span>
-  </div>
-
-  <h1 class="font-display text-[70px] md:text-[120px] leading-none mt-14 shine-text relative z-10">
-    Ram Prasath
-  </h1>
-
-  <div class="text-pink-300 text-7xl mt-4 relative z-10">
-    ∞
-  </div>
-
-  <h1 class="font-display text-[70px] md:text-[120px] leading-none mt-2 shine-text relative z-10">
-    Anuvarsha
-  </h1>
-
-  <p class="mt-10 tracking-[0.4em] uppercase text-gray-500 text-sm relative z-10">
-    07 · 06 · 2026 · Cuddalore
-  </p>
-
-  <!-- countdown -->
-
-  <div id="countdown" class="mt-16 grid grid-cols-4 gap-4 max-w-2xl mx-auto relative z-10"></div>
-
-</section>
-
-<!-- COUPLE -->
-
-<section class="section-space max-w-6xl mx-auto">
-
-  <div class="text-center">
-
-    <p class="font-script text-5xl text-pink-300">
-      the happy couple
-    </p>
-
-    <h2 class="font-display text-6xl mt-3">
-      Two Souls, One Journey
-    </h2>
-
-  </div>
-
-  <div class="grid md:grid-cols-2 gap-14 items-center mt-16">
-
-    <img
-      src="./assets/5.jpg"
-      class="rounded-[40px] soft-shadow w-full object-cover aspect-[4/5]"
-    >
-
-    <div class="space-y-8">
-
-      <div class="glass-card rounded-[35px] p-8 soft-shadow hover-card">
-
-        <p class="font-script text-pink-400 text-4xl">
-          The Groom
-        </p>
-
-        <h3 class="font-display text-5xl mt-2">
-          K. Ram Prasath
-        </h3>
-
-        <p class="mt-2 text-gray-500">
-          B.E.
-        </p>
-
-        <p class="mt-5 leading-8 text-gray-600">
-          Son of Thiru. Ra. Jothi (alias) Karthikeyan &
-          Tmt. K. Radha,
-          Vadakku Saathipattu.
-        </p>
-
-      </div>
-
-      <div class="glass-card rounded-[35px] p-8 soft-shadow hover-card">
-
-        <p class="font-script text-pink-400 text-4xl">
-          The Bride
-        </p>
-
-        <h3 class="font-display text-5xl mt-2">
-          P. Anuvarsha
-        </h3>
-
-        <p class="mt-2 text-gray-500">
-          B.Tech.
-        </p>
-
-        <p class="mt-5 leading-8 text-gray-600">
-          Daughter of Thiru. Aathi. Perumal (DME) &
-          Tmt. P. Geetha (B.Sc., B.Ed.),
-          Vilvarayanatham, Cuddalore.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- EVENTS -->
-
-<section class="section-space bg-[#fff1f4]">
-
-  <div class="text-center">
-
-    <p class="font-script text-5xl text-pink-300">
-      save the dates
-    </p>
-
-    <h2 class="font-display text-6xl mt-3">
-      Our Celebrations
-    </h2>
-
-  </div>
-
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 mt-16">
-
-    <!-- Reception -->
-
-    <div class="glass-card rounded-[40px] p-10 soft-shadow hover-card relative">
-
-      <div class="badge bg-pink-100 text-pink-500">
-        ✨ Reception
-      </div>
-
-      <h3 class="font-display text-6xl mt-10 leading-tight">
-        Manamakkal
-        <br>
-        Varaverpu
-      </h3>
-
-      <div class="mt-10 space-y-6 text-[20px]">
-
-        <div class="flex items-center gap-5">
-          <span class="text-pink-400 text-3xl">📅</span>
-          <p>Saturday, 06 June 2026</p>
-        </div>
-
-        <div class="flex items-center gap-5">
-          <span class="text-pink-400 text-3xl">🕒</span>
-          <p>6:00 PM onwards</p>
-        </div>
-
-        <div class="flex items-center gap-5">
-          <span class="text-pink-400 text-3xl">📍</span>
-          <p>RKM Convention Centre, Panruti, Cuddalore</p>
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- Wedding -->
-
-    <div class="pink-gradient rounded-[40px] p-10 text-white soft-shadow hover-card relative overflow-hidden">
-
-      <div class="badge bg-white/20 border border-white/20">
-        🤍 Wedding
-      </div>
-
-      <h3 class="font-display text-6xl mt-10 leading-tight">
-        Subha
-        <br>
-        Muhurtham
-      </h3>
-
-      <div class="mt-10 space-y-6 text-[20px]">
-
-        <div class="flex items-center gap-5">
-          <span class="text-3xl">📅</span>
-          <p>Sunday, 07 June 2026</p>
-        </div>
-
-        <div class="flex items-center gap-5">
-          <span class="text-3xl">🕒</span>
-          <p>7:30 AM – 9:30 AM</p>
-        </div>
-
-        <div class="flex items-center gap-5">
-          <span class="text-3xl">📍</span>
-          <p>RKM Convention Centre, Panruti, Cuddalore</p>
-        </div>
-
-      </div>
-
-      <div class="absolute bottom-0 right-0 text-[140px] opacity-10">
-        🌸
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- GALLERY -->
-
-<section class="section-space max-w-7xl mx-auto text-center">
-
-  <p class="font-script text-5xl text-pink-300">
-    our moments
-  </p>
-
-  <h2 class="font-display text-6xl mt-3">
-    A Glimpse of Love
-  </h2>
-
-  <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-4 mt-16">
-
-    <img src="./assets/1.jpg"
-    class="rounded-[35px] soft-shadow object-cover aspect-[3/4] hover-card">
-
-    <img src="./assets/2.jpg"
-    class="rounded-[35px] soft-shadow object-cover aspect-[3/4] hover-card md:translate-y-10">
-
-    <img src="./assets/3.jpg"
-    class="rounded-[35px] soft-shadow object-cover aspect-[3/4] hover-card">
-
-    <img src="./assets/4.jpg"
-    class="rounded-[35px] soft-shadow object-cover aspect-[3/4] hover-card md:translate-y-10">
-
-  </div>
-
-</section>
-
-<!-- VENUE -->
-
-<section class="section-space bg-[#fff1f4] text-center">
-
-  <p class="font-script text-5xl text-pink-300">
-    the venue
-  </p>
-
-  <h2 class="font-display text-6xl mt-3">
-    RKM Convention Centre
-  </h2>
-
-  <p class="mt-4 text-gray-500 text-lg">
-    Panruti, Cuddalore, Tamil Nadu
-  </p>
-
-  <a
-    href="https://maps.app.goo.gl/F12ZAkUovSFBqGiMA?g_st=aw"
-    target="_blank"
-    class="inline-block mt-6 px-8 py-4 rounded-full bg-pink-200 text-rose-600"
-  >
-    View on Google Maps
-  </a>
-
-  <div class="mt-12 max-w-5xl mx-auto rounded-[40px] overflow-hidden soft-shadow">
-
-    <iframe
-      src="https://www.google.com/maps?q=RKM+Convention+Centre+Panruti+Cuddalore&output=embed"
-      class="w-full h-[420px] border-0">
-    </iframe>
-
-  </div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section class="section-space text-center max-w-4xl mx-auto">
-
-  <p class="font-script text-5xl text-pink-300">
-    with love
-  </p>
-
-  <h2 class="font-display text-6xl mt-3">
-    Your Presence is Our Blessing
-  </h2>
-
-  <p class="mt-8 text-gray-500 leading-8 text-lg">
-    We warmly invite you to share in the joy
-    of this beautiful new beginning.
-  </p>
-
-  <div class="grid sm:grid-cols-2 gap-8 mt-14">
-
-    <a
-      href="tel:+918973850570"
-      class="glass-card rounded-[35px] p-8 soft-shadow hover-card block"
-    >
-
-      <p class="font-script text-pink-400 text-4xl">
-        The Groom
-      </p>
-
-      <h3 class="font-display text-5xl mt-2">
-        K. Ram Prasath
-      </h3>
-
-      <p class="mt-5 text-lg">
-        📞 +91 89738 50570
-      </p>
-
-    </a>
-
-    <a
-      href="tel:+916381067053"
-      class="glass-card rounded-[35px] p-8 soft-shadow hover-card block"
-    >
-
-      <p class="font-script text-pink-400 text-4xl">
-        The Bride
-      </p>
-
-      <h3 class="font-display text-5xl mt-2">
-        P. Anuvarsha
-      </h3>
-
-      <p class="mt-5 text-lg">
-        📞 +91 63810 67053
-      </p>
-
-    </a>
-
-  </div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer class="py-10 text-center bg-pink-200">
-
-  <p class="font-script text-5xl text-rose-500">
-    Ram Prasath & Anuvarsha
-  </p>
-
-  <p class="mt-4 tracking-[0.3em] uppercase text-sm text-gray-600">
-    07 · 06 · 2026 · Cuddalore
-  </p>
-
-</footer>
+<header class="hero">
+  <div class="hero-pre">With the Blessings of</div>
+  <div class="hero-god">Lord Venkateshwara</div>
+  <div class="hero-divider"><span></span><i>✦ ✦ ✦</i><span></span></div>
+  <div class="groom-name">K. Ram Prasath</div>
+  <span class="ampersand">&amp;</span>
+  <div class="bride-name">P. Anuvarsha</div>
+  <div class="hero-divider"><span></span><i>✦ ✦ ✦</i><span></span></div>
+  <div class="date-strip">07 · June · 2026 &nbsp;·&nbsp; Cuddalore</div>
+</header>
 
 <!-- COUNTDOWN -->
+<div class="countdown reveal">
+  <div class="cbox"><div class="cnum" id="cd-d">--</div><div class="clbl">Days</div></div>
+  <div class="cbox"><div class="cnum" id="cd-h">--</div><div class="clbl">Hours</div></div>
+  <div class="cbox"><div class="cnum" id="cd-m">--</div><div class="clbl">Mins</div></div>
+  <div class="cbox"><div class="cnum" id="cd-s">--</div><div class="clbl">Secs</div></div>
+</div>
 
+<!-- COUPLE -->
+<div class="sec-head reveal">
+  <span class="sec-kicker">the happy couple</span>
+  <div class="sec-title">Two Souls, One Journey</div>
+  <div class="orn"><span></span><i>✦ ✦ ✦</i><span></span></div>
+</div>
+<div class="couple-wrap reveal">
+  <div class="pc">
+    <div class="pc-role">The Groom</div>
+    <div class="pc-name">K. Ram Prasath</div>
+    <div class="pc-qual">B.E.</div>
+    <div class="pc-line"></div>
+    <div class="pc-detail">Son of Thiru. Ra. Jothi (alias) Karthikeyan &amp; Tmt. K. Radha,<br>Vadakku Sathiyapattu.</div>
+  </div>
+  <div class="pc">
+    <div class="pc-role">The Bride</div>
+    <div class="pc-name">P. Anuvarsha</div>
+    <div class="pc-qual">B.Tech.</div>
+    <div class="pc-line"></div>
+    <div class="pc-detail">Daughter of Thiru. Aathi. Perumal (DME) &amp; Tmt. P. Geetha (B.Sc., B.Ed.),<br>Villavarayanatham, Cuddalore.</div>
+  </div>
+</div>
+
+<!-- EVENTS -->
+<div class="sec-head reveal">
+  <span class="sec-kicker">save the dates</span>
+  <div class="sec-title">Our Celebrations</div>
+  <div class="orn"><span></span><i>✦ ✦ ✦</i><span></span></div>
+</div>
+<div class="events-wrap reveal">
+  <div class="ev reception">
+    <span class="ev-type">Reception</span>
+    <div class="ev-title">Manamakkal <em>Varaverpu</em></div>
+    <div class="ev-row"><span class="ev-ic">◈</span><span>Saturday, 06 June 2026</span></div>
+    <div class="ev-row"><span class="ev-ic">◈</span><span>6:00 PM onwards</span></div>
+    <div class="ev-row"><span class="ev-ic">◈</span><span>RKM Convention Centre, Cuddalore</span></div>
+    <div class="ev-ghost">06</div>
+  </div>
+  <div class="ev wedding">
+    <span class="ev-type">Wedding</span>
+    <div class="ev-title">Subha <em>Muhurtham</em></div>
+    <div class="ev-row"><span class="ev-ic">◈</span><span>Sunday, 07 June 2026</span></div>
+    <div class="ev-row"><span class="ev-ic">◈</span><span>7:30 AM – 9:30 AM</span></div>
+    <div class="ev-row"><span class="ev-ic">◈</span><span>RKM Convention Centre, Cuddalore</span></div>
+    <div class="ev-ghost">07</div>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<div class="sec-head reveal">
+  <span class="sec-kicker">our moments</span>
+  <div class="sec-title">A Glimpse of Love</div>
+  <div class="orn"><span></span><i>✦ ✦ ✦</i><span></span></div>
+</div>
+<div class="gallery-wrap reveal">
+  <div class="gallery-grid">
+    <div class="gi"><img src="./assets/1.jpg" alt="Photo 1" onerror="this.parentNode.style.background='#f7dce3';this.remove()"></div>
+    <div class="gi"><img src="./assets/2.jpg" alt="Photo 2" onerror="this.parentNode.style.background='#fde8ee';this.remove()"></div>
+    <div class="gi"><img src="./assets/3.jpg" alt="Photo 3" onerror="this.parentNode.style.background='#f0d0da';this.remove()"></div>
+    <div class="gi"><img src="./assets/4.jpg" alt="Photo 4" onerror="this.parentNode.style.background='#f7dce3';this.remove()"></div>
+  </div>
+</div>
+
+<!-- VENUE -->
+<div class="sec-head reveal">
+  <span class="sec-kicker">find us here</span>
+  <div class="sec-title">RKM Convention Centre</div>
+  <div class="orn"><span></span><i>✦ ✦ ✦</i><span></span></div>
+</div>
+<div class="venue-wrap reveal">
+  <div class="venue-loc">Cuddalore, Tamil Nadu</div>
+  <a class="map-btn" href="https://maps.app.goo.gl/F12ZAkUovSFBqGiMA?g_st=aw" target="_blank">View on Google Maps ↗</a>
+  <div class="map-outer">
+    <!-- <iframe
+      src="https://maps.google.com/maps?q=RKM+Convention+Centre,+Cuddalore,+Tamil+Nadu&output=embed&z=16"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe> -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3905.783188138495!2d79.55191507373041!3d11.780310788436168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54af049e6b4c7f%3A0xfbaea3a38d458238!2sRKM%20CONVENTION%20CENTRE!5e0!3m2!1szh-TW!2sin!4v1779183296420!5m2!1szh-TW!2sin"
+      width="600" 
+      height="450"
+      style="border:0;"
+      allowfullscreen="" 
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+      
+      </iframe>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="sec-head reveal">
+  <span class="sec-kicker">with love</span>
+  <div class="sec-title">Your Presence is Our Blessing</div>
+  <div class="orn"><span></span><i>✦ ✦ ✦</i><span></span></div>
+</div>
+<div class="contact-wrap reveal">
+  <a href="tel:+918973850570" class="cc">
+    <div class="cc-role">The Groom</div>
+    <div class="cc-name">K. Ram Prasath</div>
+    <div class="cc-line"></div>
+    <div class="cc-phone">+91 89738 50570</div>
+  </a>
+  <a href="tel:+916381067053" class="cc">
+    <div class="cc-role">The Bride</div>
+    <div class="cc-name">P. Anuvarsha</div>
+    <div class="cc-line"></div>
+    <div class="cc-phone">+91 63810 67053</div>
+  </a>
+</div>
+
+<!-- CLOSING -->
+<div class="closing reveal">
+  <p class="quote">"We warmly invite you to share in the joy of this beautiful new beginning."</p>
+</div>
+
+<!-- FOOTER -->
+<footer class="reveal">
+  <div class="foot-names">Ram Prasath &amp; Anuvarsha</div>
+  <div class="foot-date">07 · June · 2026 · Cuddalore</div>
+  <div class="foot-bar"></div>
+</footer>
+
+</div>
 <script>
-
-const weddingDate = new Date('2026-06-07T07:30:00+05:30');
-
-const countdown = document.getElementById('countdown');
-
-function updateCountdown(){
-
-  const now = new Date();
-
-  const diff = weddingDate - now;
-
-  const d = Math.max(0,Math.floor(diff / 86400000));
-
-  const h = Math.max(0,Math.floor((diff / 3600000) % 24));
-
-  const m = Math.max(0,Math.floor((diff / 60000) % 60));
-
-  const s = Math.max(0,Math.floor((diff / 1000) % 60));
-
-  countdown.innerHTML = `
-  
-  <div class="count-card rounded-[30px] py-8 shadow-lg">
-    <div class="text-5xl font-display text-rose-400">${d}</div>
-    <div class="mt-3 uppercase tracking-[0.2em] text-sm text-gray-500">
-      Days
-    </div>
-  </div>
-
-  <div class="count-card rounded-[30px] py-8 shadow-lg">
-    <div class="text-5xl font-display text-rose-400">${h}</div>
-    <div class="mt-3 uppercase tracking-[0.2em] text-sm text-gray-500">
-      Hours
-    </div>
-  </div>
-
-  <div class="count-card rounded-[30px] py-8 shadow-lg">
-    <div class="text-5xl font-display text-rose-400">${m}</div>
-    <div class="mt-3 uppercase tracking-[0.2em] text-sm text-gray-500">
-      Minutes
-    </div>
-  </div>
-
-  <div class="count-card rounded-[30px] py-8 shadow-lg">
-    <div class="text-5xl font-display text-rose-400">${s}</div>
-    <div class="mt-3 uppercase tracking-[0.2em] text-sm text-gray-500">
-      Seconds
-    </div>
-  </div>
-
-  `;
-
+const wd = new Date('2026-06-07T07:30:00+05:30');
+function tick() {
+  const d = wd - new Date();
+  if (d <= 0) return;
+  document.getElementById('cd-d').textContent = Math.floor(d / 86400000);
+  document.getElementById('cd-h').textContent = String(Math.floor(d / 3600000 % 24)).padStart(2, '0');
+  document.getElementById('cd-m').textContent = String(Math.floor(d / 60000 % 60)).padStart(2, '0');
+  document.getElementById('cd-s').textContent = String(Math.floor(d / 1000 % 60)).padStart(2, '0');
 }
+tick();
+setInterval(tick, 1000);
 
-updateCountdown();
-
-setInterval(updateCountdown,1000);
-
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
-
 </body>
 </html>
