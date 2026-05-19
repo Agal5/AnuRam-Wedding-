@@ -113,7 +113,7 @@ function Wedding() {
               <p className="text-sm text-muted-foreground mt-1">B.E.</p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Son of Thiru. Ra. Jothi (alias) Karthikeyan &amp; Tmt. K. Radha,<br />
-                Vadakku Sathiyapattu.
+                Vadakku Sathipattu.
               </p>
             </div>
             <div className="rounded-2xl bg-card p-6 shadow-soft border border-border/50">
