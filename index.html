@@ -147,6 +147,187 @@
       letter-spacing:2px;
       text-transform:uppercase;
     }
+    /* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width:768px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  .section-space{
+    padding:70px 18px;
+  }
+
+  /* HERO */
+
+  .hero-bg{
+    padding-top:90px;
+    padding-bottom:80px;
+  }
+
+  .hero-bg .font-script:first-child{
+    font-size:42px !important;
+    line-height:1.2;
+  }
+
+  .hero-bg .font-script:nth-child(7){
+    font-size:48px !important;
+  }
+
+  .shine-text{
+    font-size:58px !important;
+    line-height:1;
+  }
+
+  .hero-bg .text-7xl{
+    font-size:52px !important;
+  }
+
+  .hero-bg p.tracking-\[0\.4em\]{
+    font-size:11px;
+    letter-spacing:0.25em;
+    margin-top:24px;
+  }
+
+  /* COUNTDOWN */
+
+  #countdown{
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+    margin-top:45px;
+  }
+
+  .count-card{
+    padding:22px 10px;
+  }
+
+  .count-card .text-5xl{
+    font-size:42px !important;
+  }
+
+  /* HEADINGS */
+
+  h2.font-display{
+    font-size:48px !important;
+    line-height:1.1;
+  }
+
+  h3.font-display{
+    font-size:42px !important;
+    line-height:1.1;
+  }
+
+  /* COUPLE SECTION */
+
+  .glass-card{
+    padding:28px 24px !important;
+  }
+
+  .glass-card p{
+    line-height:1.8;
+  }
+
+  /* EVENT SECTION */
+
+  .badge{
+    font-size:12px;
+    padding:8px 18px;
+    letter-spacing:1px;
+  }
+
+  .hover-card{
+    border-radius:30px !important;
+  }
+
+  .hover-card h3{
+    font-size:52px !important;
+  }
+
+  .hover-card .space-y-6{
+    margin-top:35px;
+  }
+
+  .hover-card .space-y-6 div{
+    gap:14px;
+    align-items:flex-start;
+  }
+
+  .hover-card .space-y-6 p{
+    font-size:18px;
+    line-height:1.5;
+  }
+
+  /* GALLERY */
+
+  .md\:translate-y-10{
+    transform:none !important;
+  }
+
+  /* VENUE */
+
+  iframe{
+    height:300px !important;
+  }
+
+  /* CONTACT */
+
+  .grid.sm\:grid-cols-2{
+    grid-template-columns:1fr;
+  }
+
+  /* FOOTER */
+
+  footer .font-script{
+    font-size:42px !important;
+  }
+
+}
+
+
+/* EXTRA SMALL DEVICES */
+
+@media (max-width:480px){
+
+  .shine-text{
+    font-size:48px !important;
+  }
+
+  h2.font-display{
+    font-size:40px !important;
+  }
+
+  h3.font-display{
+    font-size:36px !important;
+  }
+
+  .hero-bg .font-script:first-child{
+    font-size:34px !important;
+  }
+
+  .hero-bg .font-script:nth-child(7){
+    font-size:40px !important;
+  }
+
+  #countdown{
+    gap:12px;
+  }
+
+  .count-card .text-5xl{
+    font-size:34px !important;
+  }
+
+  .count-card{
+    border-radius:24px !important;
+  }
+
+  .hover-card h3{
+    font-size:42px !important;
+  }
+
+}
 
   </style>
 </head>
