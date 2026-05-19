@@ -1,133 +1,582 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ram Prasath & Anuvarsha — Wedding Invitation</title>
-  <meta name="description" content="Join us in celebrating the wedding of Ram Prasath & Anuvarsha on 7th June 2026 at RKM Convention Centre, Cuddalore.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ram Prasath & Anuvarsha Wedding</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: Georgia, serif; }
-    .font-script { font-family: cursive; }
-    .font-display { font-family: 'Times New Roman', serif; }
-    .bg-gradient-blush { background: linear-gradient(135deg, #fff1f2, #ffe4e6, #fdf2f8); }
-    .bg-gradient-rose { background: linear-gradient(135deg, #e11d48, #fb7185); }
-    .shadow-soft { box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
-    .shadow-petal { box-shadow: 0 10px 35px rgba(225,29,72,0.18); }
-    .animate-float { animation: float 5s ease-in-out infinite; }
-    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-15px)} }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#fff5f7;
+      color:#4b1c2b;
+      overflow-x:hidden;
+    }
+
+    .font-script{
+      font-family:'Great Vibes',cursive;
+    }
+
+    .font-display{
+      font-family:'Cormorant Garamond',serif;
+    }
+
+    .hero-bg{
+      background:
+      linear-gradient(rgba(255,245,247,0.92),rgba(255,245,247,0.92)),
+      url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200');
+      background-size:cover;
+      background-position:center;
+    }
+
+    .glass-card{
+      background:rgba(255,255,255,0.55);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,0.4);
+    }
+
+    .pink-gradient{
+      background:linear-gradient(135deg,#f9c5d1,#f8a5c2);
+    }
+
+    .soft-shadow{
+      box-shadow:0 10px 40px rgba(236,72,153,0.12);
+    }
+
+    .count-card{
+      background:rgba(255,255,255,0.8);
+      backdrop-filter:blur(10px);
+    }
+
+    .shine-text{
+      background:linear-gradient(90deg,#e11d48,#fb7185,#e11d48);
+      background-size:200%;
+      -webkit-background-clip:text;
+      color:transparent;
+      animation:shine 4s linear infinite;
+    }
+
+    @keyframes shine{
+      to{
+        background-position:200%;
+      }
+    }
+
+    /* floating flowers */
+
+    .flower{
+      position:absolute;
+      top:-80px;
+      font-size:28px;
+      opacity:0.5;
+      animation:fall linear infinite;
+    }
+
+    .flower:nth-child(1){
+      left:8%;
+      animation-duration:8s;
+    }
+
+    .flower:nth-child(2){
+      left:25%;
+      animation-duration:12s;
+    }
+
+    .flower:nth-child(3){
+      left:50%;
+      animation-duration:9s;
+    }
+
+    .flower:nth-child(4){
+      left:75%;
+      animation-duration:11s;
+    }
+
+    .flower:nth-child(5){
+      left:90%;
+      animation-duration:7s;
+    }
+
+    @keyframes fall{
+      0%{
+        transform:translateY(-100px) rotate(0deg);
+        opacity:0;
+      }
+
+      20%{
+        opacity:0.5;
+      }
+
+      100%{
+        transform:translateY(120vh) rotate(360deg);
+        opacity:0;
+      }
+    }
+
+    .hover-card{
+      transition:0.4s ease;
+    }
+
+    .hover-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .section-space{
+      padding:90px 24px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 22px;
+      border-radius:999px;
+      font-size:14px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+
   </style>
 </head>
-<body class="bg-white text-gray-800"><main class="min-h-screen">
-  <section class="relative overflow-hidden bg-gradient-blush text-center px-6 pt-16 pb-20 md:pt-24 md:pb-28">
-    <p class="font-script text-3xl md:text-4xl text-rose-500">With blessings of Lord Venkateshwara</p>
-    <div class="mt-6 flex items-center justify-center gap-3 text-rose-600">
-      <span class="h-px w-12 bg-rose-300"></span>
-      <span>❤</span>
-      <span class="text-xs uppercase tracking-[0.4em]">Wedding Invitation</span>
-      <span>❤</span>
-      <span class="h-px w-12 bg-rose-300"></span>
-    </div><h1 class="mt-8 font-display text-5xl md:text-7xl lg:text-8xl leading-tight">
-  Ram Prasath<br>∞<br>Anuvarsha
-</h1>
-<p class="mt-6 text-sm tracking-[0.3em] text-gray-500 md:text-base">07 · 06 · 2026 · CUDDALORE</p>
- 
-<div id="countdown" class="mt-12 grid grid-cols-4 gap-3 max-w-xl mx-auto"></div>
- 
-  </section>  <section class="mx-auto max-w-5xl px-6 py-20 md:py-28">
-    <div class="text-center">
-      <p class="font-script text-rose-500 text-3xl">the happy couple</p>
-      <h2 class="font-display text-4xl md:text-5xl mt-2">Two souls, one journey</h2>
-    </div>
-    <div class="mt-14 grid gap-10 md:grid-cols-2 items-center">
-      <img src="assets/1.jpg" class="rounded-3xl shadow-petal w-full object-cover aspect-[4/5]">
-      <div class="space-y-8">
-        <div class="rounded-2xl bg-white p-6 shadow-soft border">
-          <p class="font-script text-rose-500 text-2xl">The Groom</p>
-          <h3 class="font-display text-3xl mt-1">K. Ram Prasath</h3>
-          <p class="text-sm text-gray-500 mt-1">B.E.</p>
-          <p class="mt-3 text-sm leading-relaxed text-gray-500">Son of Thiru. Ra. Jothi (alias) Karthikeyan & Tmt. K. Radha,<br>Vadakku Sathipattu.</p>
-        </div>
-        <div class="rounded-2xl bg-white p-6 shadow-soft border">
-          <p class="font-script text-rose-500 text-2xl">The Bride</p>
-          <h3 class="font-display text-3xl mt-1">P. Anuvarsha</h3>
-          <p class="text-sm text-gray-500 mt-1">B.Tech.</p>
-          <p class="mt-3 text-sm leading-relaxed text-gray-500">Daughter of Thiru. Aathi. Perumal (DME) & Tmt. P. Geetha (B.Sc., B.Ed.),<br>Vilvarayanatham, Cuddalore.</p>
-        </div>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero-bg relative overflow-hidden text-center px-6 pt-24 pb-20">
+
+  <!-- flowers -->
+
+  <div class="flower">🌸</div>
+  <div class="flower">🌺</div>
+  <div class="flower">🌷</div>
+  <div class="flower">💮</div>
+  <div class="flower">🌸</div>
+
+  <p class="font-script text-5xl text-pink-300 relative z-10">
+    With blessings of Lord
+  </p>
+
+  <p class="font-script text-6xl md:text-7xl text-pink-300 relative z-10">
+    Venkateshwara
+  </p>
+
+  <div class="mt-8 flex items-center justify-center gap-5 text-rose-400 relative z-10">
+    <span class="h-px w-14 bg-pink-300"></span>
+    <span>❤</span>
+    <span class="tracking-[0.4em] uppercase text-sm">
+      Wedding Invitation
+    </span>
+    <span>❤</span>
+    <span class="h-px w-14 bg-pink-300"></span>
+  </div>
+
+  <h1 class="font-display text-[70px] md:text-[120px] leading-none mt-14 shine-text relative z-10">
+    Ram Prasath
+  </h1>
+
+  <div class="text-pink-300 text-7xl mt-4 relative z-10">
+    ∞
+  </div>
+
+  <h1 class="font-display text-[70px] md:text-[120px] leading-none mt-2 shine-text relative z-10">
+    Anuvarsha
+  </h1>
+
+  <p class="mt-10 tracking-[0.4em] uppercase text-gray-500 text-sm relative z-10">
+    07 · 06 · 2026 · Cuddalore
+  </p>
+
+  <!-- countdown -->
+
+  <div id="countdown" class="mt-16 grid grid-cols-4 gap-4 max-w-2xl mx-auto relative z-10"></div>
+
+</section>
+
+<!-- COUPLE -->
+
+<section class="section-space max-w-6xl mx-auto">
+
+  <div class="text-center">
+
+    <p class="font-script text-5xl text-pink-300">
+      the happy couple
+    </p>
+
+    <h2 class="font-display text-6xl mt-3">
+      Two Souls, One Journey
+    </h2>
+
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-14 items-center mt-16">
+
+    <img
+      src="./assets/5.jpg"
+      class="rounded-[40px] soft-shadow w-full object-cover aspect-[4/5]"
+    >
+
+    <div class="space-y-8">
+
+      <div class="glass-card rounded-[35px] p-8 soft-shadow hover-card">
+
+        <p class="font-script text-pink-400 text-4xl">
+          The Groom
+        </p>
+
+        <h3 class="font-display text-5xl mt-2">
+          K. Ram Prasath
+        </h3>
+
+        <p class="mt-2 text-gray-500">
+          B.E.
+        </p>
+
+        <p class="mt-5 leading-8 text-gray-600">
+          Son of Thiru. Ra. Jothi (alias) Karthikeyan &
+          Tmt. K. Radha,
+          Vadakku Saathipattu.
+        </p>
+
       </div>
-    </div>
-  </section>  <section class="bg-gradient-blush py-20 px-6">
-    <div class="mx-auto max-w-5xl text-center">
-      <p class="font-script text-rose-500 text-3xl">save the dates</p>
-      <h2 class="font-display text-4xl md:text-5xl mt-2">Our Celebrations</h2>
-      <div class="mt-14 grid gap-8 md:grid-cols-2">
-        <div class="rounded-3xl bg-white p-8 shadow-petal">
-          <h3 class="font-display text-3xl">Reception</h3>
-          <p class="mt-6 text-sm">Saturday, 06 June 2026</p>
-          <p class="text-sm">6:00 PM onwards</p>
-          <p class="text-sm">RKM Convention Centre, Panruti, Cuddalore</p>
-        </div>
-        <div class="rounded-3xl bg-gradient-rose text-white p-8 shadow-petal">
-          <h3 class="font-display text-3xl">Wedding</h3>
-          <p class="mt-6 text-sm">Sunday, 07 June 2026</p>
-          <p class="text-sm">7:30 AM – 9:30 AM</p>
-          <p class="text-sm">RKM Convention Centre, Panruti, Cuddalore</p>
-        </div>
+
+      <div class="glass-card rounded-[35px] p-8 soft-shadow hover-card">
+
+        <p class="font-script text-pink-400 text-4xl">
+          The Bride
+        </p>
+
+        <h3 class="font-display text-5xl mt-2">
+          P. Anuvarsha
+        </h3>
+
+        <p class="mt-2 text-gray-500">
+          B.Tech.
+        </p>
+
+        <p class="mt-5 leading-8 text-gray-600">
+          Daughter of Thiru. Aathi. Perumal (DME) &
+          Tmt. P. Geetha (B.Sc., B.Ed.),
+          Vilvarayanatham, Cuddalore.
+        </p>
+
       </div>
+
     </div>
-  </section>  <section class="mx-auto max-w-6xl px-6 py-20 md:py-28 text-center">
-    <p class="font-script text-rose-500 text-3xl">our moments</p>
-    <h2 class="font-display text-4xl md:text-5xl mt-2">A glimpse of love</h2>
-    <div class="mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-4">
-      <img src="assets/2.jpg" class="rounded-3xl shadow-soft aspect-[3/4] object-cover">
-      <img src="assets/3.jpg" class="rounded-3xl shadow-soft aspect-[3/4] object-cover md:translate-y-8">
-      <img src="assets/4.jpg" class="rounded-3xl shadow-soft aspect-[3/4] object-cover">
-      <img src="assets/5.jpg" class="rounded-3xl shadow-soft aspect-[3/4] object-cover md:translate-y-8">
+
+  </div>
+
+</section>
+
+<!-- EVENTS -->
+
+<section class="section-space bg-[#fff1f4]">
+
+  <div class="text-center">
+
+    <p class="font-script text-5xl text-pink-300">
+      save the dates
+    </p>
+
+    <h2 class="font-display text-6xl mt-3">
+      Our Celebrations
+    </h2>
+
+  </div>
+
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 mt-16">
+
+    <!-- Reception -->
+
+    <div class="glass-card rounded-[40px] p-10 soft-shadow hover-card relative">
+
+      <div class="badge bg-pink-100 text-pink-500">
+        ✨ Reception
+      </div>
+
+      <h3 class="font-display text-6xl mt-10 leading-tight">
+        Manamakkal
+        <br>
+        Varaverpu
+      </h3>
+
+      <div class="mt-10 space-y-6 text-[20px]">
+
+        <div class="flex items-center gap-5">
+          <span class="text-pink-400 text-3xl">📅</span>
+          <p>Saturday, 06 June 2026</p>
+        </div>
+
+        <div class="flex items-center gap-5">
+          <span class="text-pink-400 text-3xl">🕒</span>
+          <p>6:00 PM onwards</p>
+        </div>
+
+        <div class="flex items-center gap-5">
+          <span class="text-pink-400 text-3xl">📍</span>
+          <p>RKM Convention Centre, Panruti, Cuddalore</p>
+        </div>
+
+      </div>
+
     </div>
-  </section>  <section class="bg-gradient-blush py-20 px-6 text-center">
-    <p class="font-script text-rose-500 text-3xl">the venue</p>
-    <h2 class="font-display text-4xl md:text-5xl mt-2">RKM Convention Centre</h2>
-    <p class="mt-3 text-gray-500">Panruti, Cuddalore, Tamil Nadu</p>
-    <a href="https://maps.app.goo.gl/F12ZAkUovSFBqGiMA?g_st=aw" target="_blank" class="mt-4 inline-block text-rose-600 underline">View on Google Maps</a>
-    <div class="mt-8 max-w-4xl mx-auto overflow-hidden rounded-3xl shadow-petal">
-      <iframe src="https://www.google.com/maps?q=RKM+Convention+Centre+Panruti+Cuddalore&output=embed" class="w-full h-[360px] md:h-[420px] border-0"></iframe>
+
+    <!-- Wedding -->
+
+    <div class="pink-gradient rounded-[40px] p-10 text-white soft-shadow hover-card relative overflow-hidden">
+
+      <div class="badge bg-white/20 border border-white/20">
+        🤍 Wedding
+      </div>
+
+      <h3 class="font-display text-6xl mt-10 leading-tight">
+        Subha
+        <br>
+        Muhurtham
+      </h3>
+
+      <div class="mt-10 space-y-6 text-[20px]">
+
+        <div class="flex items-center gap-5">
+          <span class="text-3xl">📅</span>
+          <p>Sunday, 07 June 2026</p>
+        </div>
+
+        <div class="flex items-center gap-5">
+          <span class="text-3xl">🕒</span>
+          <p>7:30 AM – 9:30 AM</p>
+        </div>
+
+        <div class="flex items-center gap-5">
+          <span class="text-3xl">📍</span>
+          <p>RKM Convention Centre, Panruti, Cuddalore</p>
+        </div>
+
+      </div>
+
+      <div class="absolute bottom-0 right-0 text-[140px] opacity-10">
+        🌸
+      </div>
+
     </div>
-  </section>  <section class="mx-auto max-w-3xl px-6 py-20 md:py-28 text-center">
-    <p class="font-script text-rose-500 text-3xl">with love</p>
-    <h2 class="font-display text-4xl md:text-5xl mt-2">Your presence is our blessing</h2>
-    <p class="mt-6 text-gray-500 leading-relaxed">We warmly invite you to share in the joy of this beautiful new beginning.</p>
-    <div class="mt-10 grid gap-4 sm:grid-cols-2 max-w-xl mx-auto">
-      <a href="tel:+918973850570" class="rounded-2xl bg-white border p-6 shadow-soft block">
-        <span class="font-script text-rose-500 text-xl">The Groom</span><br>
-        <span class="font-display text-xl">K. Ram Prasath</span><br>
-        +91 89738 50570
-      </a>
-      <a href="tel:+916381067053" class="rounded-2xl bg-white border p-6 shadow-soft block">
-        <span class="font-script text-rose-500 text-xl">The Bride</span><br>
-        <span class="font-display text-xl">P. Anuvarsha</span><br>
-        +91 63810 67053
-      </a>
-    </div>
-  </section>  <footer class="bg-gradient-rose text-white py-10 text-center">
-    <p class="font-script text-3xl">Ram Prasath & Anuvarsha</p>
-    <p class="mt-2 text-xs tracking-[0.4em] uppercase opacity-80">07 · 06 · 2026 · Cuddalore</p>
-  </footer>
-</main><script>
+
+  </div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="section-space max-w-7xl mx-auto text-center">
+
+  <p class="font-script text-5xl text-pink-300">
+    our moments
+  </p>
+
+  <h2 class="font-display text-6xl mt-3">
+    A Glimpse of Love
+  </h2>
+
+  <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-4 mt-16">
+
+    <img src="./assets/1.jpg"
+    class="rounded-[35px] soft-shadow object-cover aspect-[3/4] hover-card">
+
+    <img src="./assets/2.jpg"
+    class="rounded-[35px] soft-shadow object-cover aspect-[3/4] hover-card md:translate-y-10">
+
+    <img src="./assets/3.jpg"
+    class="rounded-[35px] soft-shadow object-cover aspect-[3/4] hover-card">
+
+    <img src="./assets/4.jpg"
+    class="rounded-[35px] soft-shadow object-cover aspect-[3/4] hover-card md:translate-y-10">
+
+  </div>
+
+</section>
+
+<!-- VENUE -->
+
+<section class="section-space bg-[#fff1f4] text-center">
+
+  <p class="font-script text-5xl text-pink-300">
+    the venue
+  </p>
+
+  <h2 class="font-display text-6xl mt-3">
+    RKM Convention Centre
+  </h2>
+
+  <p class="mt-4 text-gray-500 text-lg">
+    Panruti, Cuddalore, Tamil Nadu
+  </p>
+
+  <a
+    href="https://maps.app.goo.gl/F12ZAkUovSFBqGiMA?g_st=aw"
+    target="_blank"
+    class="inline-block mt-6 px-8 py-4 rounded-full bg-pink-200 text-rose-600"
+  >
+    View on Google Maps
+  </a>
+
+  <div class="mt-12 max-w-5xl mx-auto rounded-[40px] overflow-hidden soft-shadow">
+
+    <iframe
+      src="https://www.google.com/maps?q=RKM+Convention+Centre+Panruti+Cuddalore&output=embed"
+      class="w-full h-[420px] border-0">
+    </iframe>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="section-space text-center max-w-4xl mx-auto">
+
+  <p class="font-script text-5xl text-pink-300">
+    with love
+  </p>
+
+  <h2 class="font-display text-6xl mt-3">
+    Your Presence is Our Blessing
+  </h2>
+
+  <p class="mt-8 text-gray-500 leading-8 text-lg">
+    We warmly invite you to share in the joy
+    of this beautiful new beginning.
+  </p>
+
+  <div class="grid sm:grid-cols-2 gap-8 mt-14">
+
+    <a
+      href="tel:+918973850570"
+      class="glass-card rounded-[35px] p-8 soft-shadow hover-card block"
+    >
+
+      <p class="font-script text-pink-400 text-4xl">
+        The Groom
+      </p>
+
+      <h3 class="font-display text-5xl mt-2">
+        K. Ram Prasath
+      </h3>
+
+      <p class="mt-5 text-lg">
+        📞 +91 89738 50570
+      </p>
+
+    </a>
+
+    <a
+      href="tel:+916381067053"
+      class="glass-card rounded-[35px] p-8 soft-shadow hover-card block"
+    >
+
+      <p class="font-script text-pink-400 text-4xl">
+        The Bride
+      </p>
+
+      <h3 class="font-display text-5xl mt-2">
+        P. Anuvarsha
+      </h3>
+
+      <p class="mt-5 text-lg">
+        📞 +91 63810 67053
+      </p>
+
+    </a>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="py-10 text-center bg-pink-200">
+
+  <p class="font-script text-5xl text-rose-500">
+    Ram Prasath & Anuvarsha
+  </p>
+
+  <p class="mt-4 tracking-[0.3em] uppercase text-sm text-gray-600">
+    07 · 06 · 2026 · Cuddalore
+  </p>
+
+</footer>
+
+<!-- COUNTDOWN -->
+
+<script>
+
 const weddingDate = new Date('2026-06-07T07:30:00+05:30');
+
 const countdown = document.getElementById('countdown');
-function updateCountdown() {
+
+function updateCountdown(){
+
   const now = new Date();
+
   const diff = weddingDate - now;
-  const d = Math.max(0, Math.floor(diff / 86400000));
-  const h = Math.max(0, Math.floor((diff / 3600000) % 24));
-  const m = Math.max(0, Math.floor((diff / 60000) % 60));
-  const s = Math.max(0, Math.floor((diff / 1000) % 60));
-  countdown.innerHTML = [ ['Days', d], ['Hours', h], ['Minutes', m], ['Seconds', s] ].map(([label, value]) => `
-    <div class='rounded-2xl bg-white/80 backdrop-blur px-3 py-4 shadow-soft border'>
-      <div class='font-display text-3xl md:text-4xl text-rose-600'>${String(value).padStart(2,'0')}</div>
-      <div class='text-[10px] md:text-xs uppercase tracking-widest text-gray-500 mt-1'>${label}</div>
-    </div>`).join('');
+
+  const d = Math.max(0,Math.floor(diff / 86400000));
+
+  const h = Math.max(0,Math.floor((diff / 3600000) % 24));
+
+  const m = Math.max(0,Math.floor((diff / 60000) % 60));
+
+  const s = Math.max(0,Math.floor((diff / 1000) % 60));
+
+  countdown.innerHTML = `
+  
+  <div class="count-card rounded-[30px] py-8 shadow-lg">
+    <div class="text-5xl font-display text-rose-400">${d}</div>
+    <div class="mt-3 uppercase tracking-[0.2em] text-sm text-gray-500">
+      Days
+    </div>
+  </div>
+
+  <div class="count-card rounded-[30px] py-8 shadow-lg">
+    <div class="text-5xl font-display text-rose-400">${h}</div>
+    <div class="mt-3 uppercase tracking-[0.2em] text-sm text-gray-500">
+      Hours
+    </div>
+  </div>
+
+  <div class="count-card rounded-[30px] py-8 shadow-lg">
+    <div class="text-5xl font-display text-rose-400">${m}</div>
+    <div class="mt-3 uppercase tracking-[0.2em] text-sm text-gray-500">
+      Minutes
+    </div>
+  </div>
+
+  <div class="count-card rounded-[30px] py-8 shadow-lg">
+    <div class="text-5xl font-display text-rose-400">${s}</div>
+    <div class="mt-3 uppercase tracking-[0.2em] text-sm text-gray-500">
+      Seconds
+    </div>
+  </div>
+
+  `;
+
 }
+
 updateCountdown();
-setInterval(updateCountdown, 1000);
-</script></body>
+
+setInterval(updateCountdown,1000);
+
+</script>
+
+</body>
 </html>
