@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Heart, Calendar, MapPin, Clock, Phone, Sparkles, Infinity as InfinityIcon } from "lucide-react";
-import couple1 from "@/assets/assets/IMG-20260518-WA0073.jpg";
-import couple2 from "@/assets/assets/IMG-20260518-WA0067.jpg";
-import couple3 from "@/assets/assets/IMG-20260518-WA0069.jpg";
-import couple4 from "@/assets/couple-4.jpg";
-import couple5 from "@/assets/couple-5.jpg";
+import couple1 from "@/assets/IMG-20260518-WA0073.jpg";
+import couple2 from "@/assets/IMG-20260518-WA0067.jpg";
+import couple3 from "@/assets/IMG-20260518-WA0069.jpg";
+import couple4 from "@/assets/IMG-20260518-WA0070.jpg";
+import couple5 from "@/assets/IMG-20260518-WA0064.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -122,7 +122,7 @@ function Wedding() {
               <p className="text-sm text-muted-foreground mt-1">B.Tech.</p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Daughter of Thiru. Aathi. Perumal (DME) &amp; Tmt. P. Geetha (B.Sc., B.Ed.),<br />
-                Villavarayanatham, Cuddalore.
+                Vilavarayanatham, Cuddalore.
               </p>
             </div>
           </div>
