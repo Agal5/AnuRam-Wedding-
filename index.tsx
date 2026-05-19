@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Heart, Calendar, MapPin, Clock, Phone, Sparkles, Infinity as InfinityIcon } from "lucide-react";
-import couple1 from "@/assets/couple-1.jpg";
-import couple2 from "@/assets/couple-2.jpg";
-import couple3 from "@/assets/couple-3.jpg";
+import couple1 from "@/assets/assets/IMG-20260518-WA0073.jpg";
+import couple2 from "@/assets/assets/IMG-20260518-WA0067.jpg";
+import couple3 from "@/assets/assets/IMG-20260518-WA0069.jpg";
 import couple4 from "@/assets/couple-4.jpg";
 import couple5 from "@/assets/couple-5.jpg";
 
